@@ -38,121 +38,127 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="luxury-gradient text-white sticky top-0 z-50 backdrop-blur-md bg-secondary/95 shadow-2xl border-b border-primary/20">
+      <header className="luxury-gradient text-white sticky top-0 z-50 border-b border-primary/20 backdrop-blur-xl">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 gold-shimmer rounded-xl flex items-center justify-center shadow-2xl">
-                <Icon name="Crown" size={24} className="text-secondary" />
+              <div className="w-14 h-14 gold-shimmer rounded-xl flex items-center justify-center shadow-2xl">
+                <Icon name="Crown" size={32} className="text-secondary" />
               </div>
               <div>
-                <div className="text-2xl font-bold">ТИТАН</div>
-                <div className="text-xs text-primary/90 tracking-widest uppercase">Premium Metals</div>
+                <h1 className="text-3xl font-bold tracking-wide">ТИТАН</h1>
+                <p className="text-sm text-primary/90 font-light tracking-widest uppercase">Premium Metals</p>
               </div>
             </div>
-            <nav className="hidden lg:flex gap-10 text-sm font-medium tracking-wider">
-              <a href="#about" className="hover:text-primary transition-colors">О КОМПАНИИ</a>
-              <a href="#services" className="hover:text-primary transition-colors">УСЛУГИ</a>
-              <a href="#prices" className="hover:text-primary transition-colors">ЦЕНЫ</a>
-              <a href="#calculator" className="hover:text-primary transition-colors">КАЛЬКУЛЯТОР</a>
-              <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
-              <a href="#contacts" className="hover:text-primary transition-colors">КОНТАКТЫ</a>
+            <nav className="hidden lg:flex gap-8 text-sm font-light tracking-wide">
+              <a href="#about" className="hover:text-primary transition-all duration-300">О компании</a>
+              <a href="#services" className="hover:text-primary transition-all duration-300">Услуги</a>
+              <a href="#prices" className="hover:text-primary transition-all duration-300">Цены</a>
+              <a href="#calculator" className="hover:text-primary transition-all duration-300">Калькулятор</a>
+              <a href="#gallery" className="hover:text-primary transition-all duration-300">Галерея</a>
+              <a href="#faq" className="hover:text-primary transition-all duration-300">FAQ</a>
+              <a href="#contacts" className="hover:text-primary transition-all duration-300">Контакты</a>
             </nav>
-            <Button className="gold-shimmer text-secondary hover:opacity-90 font-bold shadow-2xl" size="lg">
-              <Icon name="Phone" size={20} className="mr-2" />
-              ЗАКАЗАТЬ ЗВОНОК
+            <Button className="gold-shimmer text-secondary hover:opacity-90 transition-opacity font-medium shadow-2xl">
+              <Icon name="Phone" size={18} className="mr-2" />
+              +7 (495) 123-45-67
             </Button>
           </div>
         </div>
       </header>
 
-      <section className="relative py-32 luxury-gradient text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-secondary/20"></div>
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent"></div>
+      <section className="luxury-gradient text-white py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-primary/20"></div>
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(212, 175, 55, 0.15) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-block px-5 py-2 bg-primary/30 rounded-full mb-8 backdrop-blur-sm border border-primary/40">
-              <span className="text-primary text-sm font-bold tracking-widest uppercase">Премиальный сервис с 2009 года</span>
+            <div className="inline-block px-6 py-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full mb-8">
+              <span className="text-primary font-light tracking-widest uppercase text-sm">С 2009 года на рынке</span>
             </div>
-            <h1 className="text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-              Приём <span className="gold-shimmer bg-clip-text text-transparent">цветных металлов</span>
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
+              Элитный приём
+              <span className="block text-primary mt-3 gold-shimmer bg-clip-text text-transparent">цветных металлов</span>
             </h1>
-            <p className="text-2xl mb-12 text-gray-200 max-w-2xl font-light leading-relaxed">
-              Максимальные цены в Подольске • Бесплатный вывоз от 500 кг • Мгновенная оплата любым способом
+            <p className="text-2xl text-gray-300 mb-12 font-light leading-relaxed max-w-2xl">
+              Премиальный сервис для физических и юридических лиц. Честная оценка, высокие цены, безупречная репутация.
             </p>
-            <div className="flex gap-6">
-              <Button className="gold-shimmer text-secondary hover:opacity-90 font-bold text-lg h-16 px-10 shadow-2xl" size="lg">
+            <div className="flex flex-wrap gap-6">
+              <Button size="lg" className="gold-shimmer text-secondary hover:opacity-90 font-medium text-lg px-10 py-7 shadow-2xl">
                 <Icon name="Calculator" size={24} className="mr-3" />
-                УЗНАТЬ ЦЕНУ
+                Рассчитать стоимость
               </Button>
-              <Button variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-bold text-lg h-16 px-10" size="lg">
+              <Button size="lg" className="glass-effect text-white hover:bg-white/10 font-light text-lg px-10 py-7 border-primary/30">
                 <Icon name="Phone" size={24} className="mr-3" />
-                +7 (495) 123-45-67
+                Вызвать специалиста
               </Button>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute right-0 top-1/4 w-1/3 h-1/2 opacity-20 blur-3xl bg-primary rounded-full"></div>
+        <div className="absolute left-0 bottom-0 w-1/4 h-1/3 opacity-10 blur-3xl bg-primary rounded-full"></div>
       </section>
 
       <section id="about" className="py-28 bg-gradient-to-b from-white to-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-6">
-                <span className="text-primary text-sm font-medium tracking-widest uppercase">О КОМПАНИИ</span>
+                <span className="text-primary text-sm font-medium tracking-widest uppercase">О нас</span>
               </div>
-              <h2 className="text-5xl font-bold mb-6">Премиум-стандарты работы</h2>
-              <p className="text-xl text-foreground/70 mb-6 font-light leading-relaxed">
-                Более 15 лет ТИТАН устанавливает высочайшие стандарты в индустрии приёма цветных металлов.
+              <h2 className="text-5xl font-bold mb-8 leading-tight">Премиальные стандарты работы с металлами</h2>
+              <p className="text-xl text-foreground/80 mb-6 leading-relaxed font-light">
+                Более 15 лет ТИТАН устанавливает высочайшие стандарты в индустрии приёма цветных металлов. 
+                Наша репутация построена на честности, точности и безупречном сервисе.
               </p>
-              <p className="text-xl text-foreground/70 mb-10 font-light leading-relaxed">
-                Мы специализируемся на работе с медью, алюминием, латунью, бронзой. Обслуживаем частных клиентов и предприятия.
+              <p className="text-xl text-foreground/80 mb-10 leading-relaxed font-light">
+                Мы специализируемся на работе с премиальными металлами: медь, алюминий, латунь, бронза. 
+                Обслуживаем как частных клиентов, так и крупнейшие промышленные предприятия региона.
               </p>
-              <div className="grid grid-cols-3 gap-6">
-                <div className="glass-effect rounded-2xl p-6 text-center border border-primary/20 shadow-lg">
-                  <div className="text-4xl font-bold gold-shimmer bg-clip-text text-transparent mb-2">15+</div>
-                  <div className="text-sm text-foreground/60 font-light">Лет на рынке</div>
+              <div className="grid grid-cols-3 gap-8">
+                <div className="text-center p-6 rounded-xl glass-effect">
+                  <div className="text-5xl font-bold gold-shimmer bg-clip-text text-transparent mb-3">15+</div>
+                  <div className="text-sm text-foreground/60 tracking-wide uppercase">лет на рынке</div>
                 </div>
-                <div className="glass-effect rounded-2xl p-6 text-center border border-primary/20 shadow-lg">
-                  <div className="text-4xl font-bold gold-shimmer bg-clip-text text-transparent mb-2">5000+</div>
-                  <div className="text-sm text-foreground/60 font-light">Клиентов</div>
+                <div className="text-center p-6 rounded-xl glass-effect">
+                  <div className="text-5xl font-bold gold-shimmer bg-clip-text text-transparent mb-3">5000+</div>
+                  <div className="text-sm text-foreground/60 tracking-wide uppercase">клиентов</div>
                 </div>
-                <div className="glass-effect rounded-2xl p-6 text-center border border-primary/20 shadow-lg">
-                  <div className="text-4xl font-bold gold-shimmer bg-clip-text text-transparent mb-2">24/7</div>
-                  <div className="text-sm text-foreground/60 font-light">Работаем</div>
+                <div className="text-center p-6 rounded-xl glass-effect">
+                  <div className="text-5xl font-bold gold-shimmer bg-clip-text text-transparent mb-3">24/7</div>
+                  <div className="text-sm text-foreground/60 tracking-wide uppercase">работаем</div>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square glass-effect rounded-3xl flex items-center justify-center border border-primary/20 shadow-2xl overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <Icon name="Award" size={200} className="text-primary/30 relative z-10" />
+              <div className="aspect-square luxury-gradient rounded-3xl p-12 flex items-center justify-center shadow-2xl border border-primary/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl"></div>
+                <Icon name="Award" size={240} className="text-primary/40 relative z-10" />
               </div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 gold-shimmer rounded-full blur-3xl opacity-50"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 gold-shimmer rounded-full blur-3xl opacity-30"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" className="py-28 luxury-gradient relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent"></div>
-        <div className="container mx-auto px-6 relative z-10">
+      <section id="services" className="py-28 luxury-gradient">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-1 bg-primary/20 rounded-full mb-6">
-              <span className="text-primary text-sm font-medium tracking-widest uppercase">УСЛУГИ</span>
+              <span className="text-primary text-sm font-medium tracking-widest uppercase">Услуги</span>
             </div>
-            <h2 className="text-5xl font-bold text-white mb-6">Премиум-сервис</h2>
-            <p className="text-xl text-gray-300 font-light">
-              Полный спектр услуг для вашего удобства
+            <h2 className="text-5xl font-bold text-white mb-6">Премиум сервис</h2>
+            <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto">
+              Полный спектр услуг по работе с цветными металлами
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, idx) => (
-              <div key={idx} className="glass-effect rounded-3xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer group border border-primary/20 shadow-xl">
-                <div className="w-16 h-16 gold-shimmer rounded-2xl flex items-center justify-center mb-6 shadow-2xl group-hover:scale-110 transition-transform">
-                  <Icon name={service.icon} size={28} className="text-secondary" />
+              <div key={idx} className="glass-effect p-8 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer">
+                <div className="w-20 h-20 gold-shimmer rounded-2xl flex items-center justify-center mb-6 shadow-xl group-hover:scale-110 transition-transform">
+                  <Icon name={service.icon} size={36} className="text-secondary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 font-light leading-relaxed">{service.desc}</p>
               </div>
             ))}
@@ -160,36 +166,41 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="prices" className="py-28 bg-gradient-to-b from-white to-muted/30">
+      <section id="prices" className="py-28 bg-gradient-to-b from-muted/30 to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-1 bg-primary/10 rounded-full mb-6">
-              <span className="text-primary text-sm font-medium tracking-widest uppercase">ПРАЙС-ЛИСТ</span>
+              <span className="text-primary text-sm font-medium tracking-widest uppercase">ПРАЙС</span>
             </div>
-            <h2 className="text-5xl font-bold mb-6">Цены на металл</h2>
-            <p className="text-lg text-muted-foreground font-light">
-              Актуально на {new Date().toLocaleDateString('ru-RU')}
+            <h2 className="text-5xl font-bold mb-6">Премиальные расценки</h2>
+            <p className="text-xl text-muted-foreground font-light">
+              Актуальные цены на {new Date().toLocaleDateString('ru-RU')}
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
             <div className="glass-effect rounded-3xl overflow-hidden border border-primary/20 shadow-2xl">
               <div className="divide-y divide-primary/10">
                 {metalTypes.map((metal, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-8 hover:bg-primary/5 transition-all group">
-                    <div>
-                      <div className="font-bold text-2xl mb-1">{metal.name}</div>
-                      <div className="text-sm text-muted-foreground font-light">за килограмм</div>
+                  <div key={idx} className="flex items-center justify-between p-8 hover:bg-primary/5 transition-all duration-300 group">
+                    <div className="flex items-center gap-6">
+                      <div className="w-16 h-16 gold-shimmer rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                        <Icon name="Sparkles" size={28} className="text-secondary" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-2xl mb-1">{metal.name}</div>
+                        <div className="text-sm text-muted-foreground tracking-wide uppercase">за 1 килограмм</div>
+                      </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-4xl font-bold gold-shimmer bg-clip-text text-transparent">{metal.price} ₽</div>
+                      <div className="text-5xl font-bold gold-shimmer bg-clip-text text-transparent">{metal.price} ₽</div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="text-center mt-12 py-8 px-6 glass-effect rounded-2xl border border-primary/20">
-              <p className="text-sm text-foreground/60 font-light leading-relaxed">
-                Цены варьируются в зависимости от объёма и качества
+            <div className="text-center mt-12 p-8 bg-primary/5 rounded-2xl border border-primary/10">
+              <p className="text-lg text-foreground/70 font-light">
+                * Цены могут варьироваться в зависимости от объёма и качества. Для точного расчёта свяжитесь с нашим специалистом.
               </p>
             </div>
           </div>
